@@ -2,7 +2,7 @@
 # docker network create goals-net   
 
 ### mongodb ###
-# docker run --name mongodb --rm -d --network goals-net mongo
+# docker run --name mongodb -v goals-data:/data/db --rm -d --network goals-net -e MONGO_INITDB_ROOT_USERNAME=john -e MONGO_INITDB_ROOT_PASSWORD=secret mongo
 
 ### backend ###
 FROM node
