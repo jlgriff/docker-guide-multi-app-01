@@ -17,7 +17,7 @@ COPY . /app
 
 EXPOSE 80
 
-CMD [ "node", "app.js" ]
+CMD [ "npm", "start" ]
 
 # docker build -t goals-backend .
-# docker run -d --name goals-backend --network goals-net -p 80:80 --rm goals-backend
+# docker run -d --name goals-backend -p 80:80 --network goals-net -v "C:\Users\banza\git\docker-guide-multi-app-01\backend:/app" -v /app/node_modules -v goals-logs:/app/logs --rm goals-backend
